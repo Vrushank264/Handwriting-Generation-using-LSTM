@@ -5,7 +5,7 @@ from model import HandwritingGenerator
 from utils import *
 
 
-MODEL_PATH = '/content/drive/MyDrive/Handwriting/Handwriting_model.pth'
+MODEL_PATH = '/content/drive/MyDrive/Handwriting/model.pth'
 train_dataset = GetDataset('/content/drive/MyDrive/Handwriting', split = 'train')
 test_dataset = GetDataset('/content/drive/MyDrive/Handwriting', split = 'test')
 model = HandwritingGenerator(vocab_size = train_dataset.vocab_size, hidden_size = 400, num_layers = 3, num_mixtures_attn = 10, num_mixtures_output = 20).cuda()
